@@ -11,7 +11,7 @@ class UserInterface{
         const listProduct = document.getElementById('product-list');
         const element = document.createElement('div');
 
-        element.innerHTML = `<div class='card text-center mb-4'> 
+        element.innerHTML = `<div class='card text-center mb-3'> 
                                 <div class = 'card-body'>
                                     <strong>Product Name</strong>: ${product.name}
                                     <strong>Product Price</strong>: ${product.price}
@@ -38,17 +38,17 @@ class UserInterface{
     showMessage(text, cssClass){
         const container = document.querySelector('.container');
         const div = document.createElement('div');
-        const app = document.querySelectorAll('#App');
+        const app = document.querySelectorAll('#App')[0];
         
-        div.className = `alert alert-dismissible alert-${cssClass} col-md-3`;
+        div.className = `alert alert-dismissible alert-${cssClass}`;
         div.appendChild(document.createTextNode(text));
 
         //Showing in DOM
         
-        container.insertBefore(div, app.firsChild);
+        container.insertBefore(div, app);
         setTimeout(function(){
             document.querySelector('.alert').remove();
-        }, 1500)
+        }, 350)
     }
 }
 
