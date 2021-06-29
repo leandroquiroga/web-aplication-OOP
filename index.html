@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product app</title>
+        <!-- BOOTSTRAP Styles -->
+        <link href="/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Barra de navegacion -->
+        <header>
+            <nav class="navbar navbar-light bg-light">
+                <a href="#" class="navbar-brand">
+                    Product Aplication
+                </a>
+            </nav>            
+        </header>
+
+        <div class="container">
+
+            <div id="App" class="row pt-5 mt-5">
+                <!-- Info APP -->
+                    <article class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Add a product</h4>
+                            </div>
+
+                            <!-- Form -->
+                            <form id="product-form" class="card-body">
+                                <div class="form-group p-2">
+                                    <input type="text" id="name" placeholder="Product Name" class="form-control">
+                                </div>
+                                <div class="form-group p-2">
+                                    <input type="number" id="price" step="0.01" placeholder="Product Price" class="form-control">
+                                </div>
+                                <div class="form-group p-2">
+                                    <input type="number" id="year" min="2020" max="2024" value="2020" placeholder="Year Product" class="form-control">
+                                </div>
+
+                                <div class="grid gap-2">
+                                    <input type="submit" value="Save" class="btn btn-dark w-100">
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+
+                    <!-- Product List-->
+                    <article class="col-md-8">
+                        <div id="product-list" class="col-md-10"></div>
+                    </article>
+
+            </div>
+        </div> 
+
+        <script src="app.js"></script>
+    </body>
+</html>
